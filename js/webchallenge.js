@@ -1,7 +1,8 @@
 function setup() {
     //create the Canvas
-    background('blue');
+
     createCanvas(windowWidth, windowHeight);
+    background(50,56,59);
 
   //top box
   strokeWeight(2);
@@ -27,7 +28,7 @@ function setup() {
   rect(200-20,100+200,240,40);
 
       strokeWeight(6);
-  stroke('black');
+  stroke('darkblue');
   fill('blue');
   rect(200-10,100+210,220,20);
 
