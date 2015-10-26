@@ -1,122 +1,137 @@
+var myWinWidth, myWinHeight;
+
 function setup() {
 
-
-    createCanvas(windowWidth, windowHeight);
-    background(50,56,59);
-
+    var cnv = createCanvas(860, 3190);
+    cnv.parent("windows")
 
 
+    background("peru");
 
- var x = 0;
- var y = 0;
-var gridWidth = width - 100;
+
+var colWidth = 270;
+var rowHeight = 420;
+
+    myWinWidth = 220;
+    myWinHeight = 250;
+
+
+ var x = 50;
+ var y = 150;
+
+
 for (var i = 0; i < 100; i++) {
-    console.log(i);
-
 
  drawWindow(x,y);
 
 
-    x += 120;
-    if (x > gridWidth)
+    x += colWidth;
+
+    if (x > width-myWinWidth)
     {
-        x = 0;
-         y+=270;}
+        x = 50;
+         y+=rowHeight;}
+}
 }
 
 
 
+
 function drawWindow(startX, startY){
-    fill("peru");
-    rect(startX, startY, 100, 250);
-}}
+  strokeWeight(10);
 
-//function setup() {
-//    //create the Canvas
+      fill('blue');
+    ellipse(startX+myWinWidth/2, startY,myWinWidth, myWinWidth);
+
+     strokeWeight(10);
+  fill('blue');
+    rect(startX, startY, myWinWidth, myWinHeight);
+
+  strokeWeight(10);
+        stroke('black');
+    var x1, x2, y1, y2;
+
+        x1= startX+myWinWidth/2;
+        x2= startY;
+        y1= startX+myWinWidth/2;
+        y2= startY+myWinHeight;
+
+
+
+    line(x1, x2, y1, y2);
+
+      strokeWeight(10);
+      stroke('black');
+    var x1, x2, y1, y2;
+
+        x1= startX;
+        x2= startY+myWinHeight/2;
+        y1= startX+myWinWidth;
+        y2= startY+myWinHeight/2;
+
+
+
+    line(x1, x2, y1, y2);
+
+     strokeWeight(10);
+      stroke('black');
+    var x1, x2, y1, y2;
+
+        x1= startX+myWinWidth/4;
+        x2= startY-myWinHeight/4-33;
+        y1= startX+myWinWidth/2;
+        y2= startY;
+
+
+
+    line(x1, x2, y1, y2);
+
+      strokeWeight(10);
+      stroke('black');
+    var x1, x2, y1, y2;
+
+        x1= startX+myWinWidth/4+myWinWidth/2;
+        x2= startY-myWinHeight/4-33;
+        y1= startX+myWinWidth/2;
+        y2= startY;
+
+
+
+    line(x1, x2, y1, y2);
+
+
+}
+
+    
+    //    
+//var colWidthB = 40;
+//var rowHeightB = 25;
 //
-//    createCanvas(windowWidth, windowHeight);
-//    background(50,56,59);
-//
-//  //top box
-//  strokeWeight(2);
-//  stroke('black');
-//  fill('blue');
-//  rect(200-30,100-40,260,40);
-//
-//    strokeWeight(6);
-//  stroke('darkblue');
-//  fill('blue');
-//  rect(200-20,100-30,240,20);
-//
-//  //inside box
-//  strokeWeight(1);
-//  stroke('black');
-//  fill('darkblue');
-//  rect(200,100,200,200);
-//
-//  //bottom box
-//  strokeWeight(2);
-//  stroke('darkblue');
-//  fill('blue');
-//  rect(200-20,100+200,240,40);
-//
-//      strokeWeight(6);
-//  stroke('darkblue');
-//  fill('blue');
-//  rect(200-10,100+210,220,20);
-//
-//
-//  fill('yellow');
-//    rect(210, 110, 85, 85, 30);
-//    rect(210+100, 110, 85, 85, 30);
-//    rect(210, 110+100, 85, 85, 30);
-//    rect(210+100, 110+100, 85, 85, 30);
-//
-//   //left door
-//  strokeWeight(2);
-//  stroke('black');
-//  fill('blue');
-//  rect(200-100,100,100,200);
-//
-//     strokeWeight(10);
-//  stroke('darkblue');
-//  fill('blue');
-//  rect(200-80,100+25,60, 65);
-//      strokeWeight(10);
-//  stroke('darkblue');
-//  fill('blue');
-//  rect(200-80,100+115,60, 65);
-//
-//
-//   //right door
-//  strokeWeight(2);
-//  stroke('black');
-//  fill('blue');
-//  rect(200+200,100,100,200);
-//
-//     strokeWeight(10);
-//  stroke('darkblue');
-//  fill('blue');
-//  rect(200+220,100+25,60, 65);
-//      strokeWeight(10);
-//  stroke('darkblue');
-//  fill('blue');
-//  rect(200+220,100+115,60, 65);
+//    myBWidth = 40;
+//    myBHeight = 25;
 //
 //
+// var xB = 0;
+// var yB = 0;
+
+//for (var b = 0; b < 100; b++) {
 //
+// drawBricks(xB,yB);
+//
+//
+//    xB += colWidthB;
+//
+//    if (xB > width-myBWidth)
+//    {
+//        xB = 0;
+//         yB+=rowHeightB;}
 //}
-
-//  strokeWeight(4);
-//  stroke('peru');
-//  line(65,70,65,70+150);
-//  var x = 65+(125-30)/2;
-//  line(x,70,x,70+150);
-//  x = 65+(125-30);
-//  line(x,70,x,70+150);
-//
-//  line(65,70,x,70);
-//  line(65,70+150/2,x,70+150/2);
-//  line(65,70+150,x,70+150);
-
+    
+    //function drawBricks(xB, yB){
+//    strokeWeight(1);
+//    stroke('black');
+//    line(xB,yB, ,myBWidth, myBHeight);
+//    strokeWeight(1);
+//    stroke('black');
+//    line(xB,yB, ,myBWidth, myBHeight);
 
