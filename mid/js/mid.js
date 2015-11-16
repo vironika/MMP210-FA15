@@ -3,16 +3,19 @@
 //my patern has couple colorsets, you can change them by clicking the mouse
 
 
+// for my pattern width and lenght, also my row and colomn
 var colWidth = 180;
 var rowHeight = 180;
 
+// my pattern colors
 var frColor;
 var frStroke;
 var bColor;
-
+// for my pattern colorsets
 var colorSets;
 var currentColor = 0;
 
+// begining of my pattern 
 var x = 0;
 var y = 0;
 
@@ -23,9 +26,13 @@ function setup() {
 
     createCanvas(windowWidth, windowHeight)
 
-
+// main colors 
     background("green");
-
+    frColor = color('orange');
+    frStroke = color('darkorange');
+    
+    
+// colors pattern can change to 
 colorSets = [
 
 
@@ -60,12 +67,14 @@ colorSets = [
 
         ]
 
-    frColor = color('orange');
-    frStroke = color('darkorange');
+  
     drawShapes();
     
     
 }
+
+
+// create pattern by looping it
 
 function drawShapes(){
     // loop
@@ -86,12 +95,8 @@ function drawShapes(){
     
 }
 
+// this function changing colorsets 
 function mousePressed() {
-// 
-
-    
-
-
 
     currentColor = floor(random(colorSets.length));
 
@@ -99,8 +104,7 @@ function mousePressed() {
 
 
 
-    x = 0;
-    y = 0;
+  
 
 
 
@@ -108,21 +112,7 @@ function mousePressed() {
     frStroke = colorSets[currentColor].lC;
     bColor = colorSets[currentColor].bC;
     background(bColor);
-    // for (var i = 0; i < 1000; i++) {
 
-
-    //     drawFruit(x, y, frColor, frStroke);
-    //     drawDiamonds(x, y);
-
-
-
-    //     x += colWidth;
-
-    //     if (x > width) {
-    //         x = 0;
-    //         y += rowHeight;
-    //     }
-    // }
      drawShapes();
 }
 
