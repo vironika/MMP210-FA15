@@ -26,36 +26,7 @@ function setup() {
 
     background("green");
 
-
-
-    frColor = color('orange');
-    frStroke = color('darkorange');
-    drawShapes();
-}
-
-function drawShapes(){
-    // loop
-    for (var i = 0; i < 1000; i++) {
-
-        drawFruit(x, y, frColor, frStroke);
-        drawDiamonds(x, y);
-
-
-
-        x += colWidth;
-
-        if (x > width) {
-            x = 0;
-            y += rowHeight;
-        }
-    }
-    
-}
-
-function mousePressed() {
-// 
-
-    colorSets = [
+colorSets = [
 
 
         {
@@ -88,6 +59,37 @@ function mousePressed() {
         }
 
         ]
+
+    frColor = color('orange');
+    frStroke = color('darkorange');
+    drawShapes();
+    
+    
+}
+
+function drawShapes(){
+    // loop
+    for (var i = 0; i < 1000; i++) {
+
+        drawFruit(x, y, frColor, frStroke);
+        drawDiamonds(x, y);
+
+
+
+        x += colWidth;
+
+        if (x > width) {
+            x = 0;
+            y += rowHeight;
+        }
+    }
+    
+}
+
+function mousePressed() {
+// 
+
+    
 
 
 
