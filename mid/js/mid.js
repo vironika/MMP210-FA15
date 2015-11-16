@@ -95,7 +95,7 @@ function drawShapes(){
     
 }
 
-// this function changing colorsets 
+// this function changing colorsets when mouse pressed
 function mousePressed() {
 
     currentColor = floor(random(colorSets.length));
@@ -112,6 +112,7 @@ function mousePressed() {
     frColor = colorSets[currentColor].frC;
     frStroke = colorSets[currentColor].lC;
     bColor = colorSets[currentColor].bC;
+    
     background(bColor);
 
      drawShapes();
