@@ -30,7 +30,11 @@ function setup() {
 
     frColor = color('orange');
     frStroke = color('darkorange');
+    drawShapes();
+}
 
+function drawShapes(){
+    // loop
     for (var i = 0; i < 1000; i++) {
 
         drawFruit(x, y, frColor, frStroke);
@@ -45,10 +49,11 @@ function setup() {
             y += rowHeight;
         }
     }
+    
 }
 
-
 function mousePressed() {
+// 
 
     colorSets = [
 
@@ -101,28 +106,29 @@ function mousePressed() {
     frStroke = colorSets[currentColor].lC;
     bColor = colorSets[currentColor].bC;
     background(bColor);
-    for (var i = 0; i < 1000; i++) {
+    // for (var i = 0; i < 1000; i++) {
 
 
-        drawFruit(x, y, frColor, frStroke);
-        drawDiamonds(x, y);
+    //     drawFruit(x, y, frColor, frStroke);
+    //     drawDiamonds(x, y);
 
 
 
-        x += colWidth;
+    //     x += colWidth;
 
-        if (x > width) {
-            x = 0;
-            y += rowHeight;
-        }
-    }
+    //     if (x > width) {
+    //         x = 0;
+    //         y += rowHeight;
+    //     }
+    // }
+     drawShapes();
 }
 
 
 
+// changebele part of patte
 
 function drawFruit(startX, startY, iColor, iStroke) {
-
 
 
 
@@ -208,6 +214,7 @@ function drawFruit(startX, startY, iColor, iStroke) {
     line(x1, y1, x2, y2)
 
 }
+// changebele part of pattern, not going to change
 
 function drawDiamonds(startX, startY) {
 
@@ -279,8 +286,5 @@ function drawDiamonds(startX, startY) {
 
 
     line(x1, y1, x2, y2)
-
-
-
 
 }
