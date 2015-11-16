@@ -103,7 +103,8 @@ function mousePressed() {
     console.log(currentColor)
 
 
-
+    x = 0;
+    y = 0;
   
 
 
